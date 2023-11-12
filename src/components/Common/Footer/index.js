@@ -30,42 +30,34 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterWrap>
-        <FooterLinksContainer>
+        {/* <FooterLinksContainer>
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle> About Us</FooterLinkTitle>
-              <FooterLink to="/signin">How it Works? </FooterLink>
-              {/* <FooterLink to="/signin">Testimonals </FooterLink> */}
-              <FooterLink to="/signin"> Careers </FooterLink>
-              <FooterLink to="/signin">Investors </FooterLink>
-              <FooterLink to="/signin">Terms of Service</FooterLink>
+              <FooterLink to="/about/terms">How it Works? </FooterLink>
+
+              <FooterLink to="/about/terms">Terms of Service</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle> About Us</FooterLinkTitle>
-              <FooterLink to="/signin">How it Works? </FooterLink>
-              {/* <FooterLink to="/signin">Testimonals </FooterLink> */}
-              <FooterLink to="/signin"> Careers </FooterLink>
-              <FooterLink to="/signin">Investors </FooterLink>
-              <FooterLink to="/signin">Terms of Service</FooterLink>
+              <FooterLink to="/about/terms">How it Works? </FooterLink>
+
+              <FooterLink to="/about/terms">Terms of Service</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle> About Us</FooterLinkTitle>
-              <FooterLink to="/signin">How it Works? </FooterLink>
-              {/* <FooterLink to="/signin">Testimonals </FooterLink> */}
-              <FooterLink to="/signin"> Careers </FooterLink>
-              <FooterLink to="/signin">Investors </FooterLink>
-              <FooterLink to="/signin">Terms of Service</FooterLink>
+              <FooterLink to="/about/terms">How it Works? </FooterLink>
+
+              <FooterLink to="/about/terms">Terms of Service</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle> About Us</FooterLinkTitle>
-              <FooterLink to="/signin">How it Works? </FooterLink>
-              {/* <FooterLink to="/signin">Testimonals </FooterLink> */}
-              <FooterLink to="/signin"> Careers </FooterLink>
-              <FooterLink to="/signin">Investors </FooterLink>
-              <FooterLink to="/signin">Terms of Service</FooterLink>
+              <FooterLink to="/about/terms">How it Works? </FooterLink>
+
+              <FooterLink to="/about/terms">Terms of Service</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
-        </FooterLinksContainer>
+        </FooterLinksContainer> */}
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to="/" onClick={toggleHome}>
@@ -74,6 +66,7 @@ const Footer = () => {
             <WebsiteRights>
               Curtis Wilmoth &copy; {new Date().getFullYear()} All Rights
               Reserved
+              <FooterLink to="/about/terms"> | Terms of Service</FooterLink>
             </WebsiteRights>
             <SocialIcons>
               <SocialIconLink
@@ -105,7 +98,7 @@ const Footer = () => {
                 <FaGithub />
               </SocialIconLink>
               <SocialIconLink
-                href="https://www.linkedin.com/in/chirag-s-74324a1a6/"
+                href="https://www.linkedin.com/"
                 target="_blank"
                 aria-label="Linkedin"
               >

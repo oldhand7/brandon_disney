@@ -2,9 +2,9 @@ import { Box, Grid } from "@material-ui/core";
 import React from "react";
 import {
   renderButton,
+  renderDatePicker,
   renderInputText,
   renderSelect,
-  renderSelectType,
   renderText,
 } from "../../DisplayComponent";
 import "./styles.css";
@@ -16,7 +16,7 @@ export default function PersonalBio({ state, handleOnChange, handleNext }) {
         {renderText({ label: "Please Fill The Personal Details" })}
       </Box>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={12}>
           {renderInputText({
             label: "First Name",
             name: "firstName",
@@ -24,7 +24,10 @@ export default function PersonalBio({ state, handleOnChange, handleNext }) {
             handleOnChange,
           })}
         </Grid>
-        <Grid item xs={12} sm={6}>
+        </Grid>
+      <Grid container spacing={2}>
+
+        <Grid item xs={12} sm={12}>
           {renderInputText({
             label: "Last Name",
             name: "lastName",
@@ -33,8 +36,8 @@ export default function PersonalBio({ state, handleOnChange, handleNext }) {
           })}
         </Grid>
       </Grid>
-      <Grid container spacing={2} style={{ marginTop: "1rem" }}>
-        <Grid item xs={12} sm={6}>
+      <Grid container spacing={2} >
+        <Grid item xs={12} sm={12}>
           {renderSelect({
             label: "Gender",
             name: "gender",
@@ -42,36 +45,21 @@ export default function PersonalBio({ state, handleOnChange, handleNext }) {
             handleOnChange,
           })}
         </Grid>
-        <Grid item xs={12} sm={6}>
-          {renderSelectType({
-            label: "User Type",
-            name: "type",
+        </Grid>
+      <Grid container spacing={2}>
+
+        <Grid item xs={12} sm={12}>
+          {/* {renderDatePicker({
+            label: "BirthDay",
+            name: "birthday",
             state,
             handleOnChange,
-          })}
+          })} */}
         </Grid>
       </Grid>
-      <Grid container spacing={2} style={{ marginTop: "1rem" }}>
-        <Grid item xs={12} sm={6}>
-          {renderInputText({
-            label: "Username",
-            name: "username",
-            state,
-            handleOnChange,
-          })}
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          {renderInputText({
-            label: "Password",
-            name: "password",
-            state,
-            handleOnChange,
-            type: "password",
-          })}
-        </Grid>
-      </Grid>
-      <Grid container spacing={2} style={{ marginTop: "1rem" }}>
-        <Grid item xs={12} sm={6}>
+     
+      <Grid container spacing={2} >
+        <Grid item xs={12} sm={12}>
           {renderInputText({
             label: "Phone Number",
             name: "phone",
@@ -79,7 +67,10 @@ export default function PersonalBio({ state, handleOnChange, handleNext }) {
             handleOnChange,
           })}
         </Grid>
-        <Grid item xs={12} sm={6}>
+        </Grid>
+      <Grid container spacing={2}>
+
+        <Grid item xs={12} sm={12}>
           {renderInputText({
             label: "Email Address",
             name: "email",

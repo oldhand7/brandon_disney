@@ -21,6 +21,6 @@ export const Styles = {
     "&::placeholder": {
       color: "white",
     },
-    MuiSelected: { color: "orange" },
+    MuiSelected: { color: "black" },
   },
 };

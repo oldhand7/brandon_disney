@@ -1,6 +1,7 @@
 import { Typography } from "@material-ui/core";
 import { Button, createMuiTheme, MenuItem, ThemeProvider } from "@mui/material";
 import TextField from "@mui/material/TextField";
+import { DatePicker, DateTimePicker } from "@mui/x-date-pickers";
 
 const genders = [
   {
@@ -92,7 +93,7 @@ export const renderInputText = ({
         InputLabelProps={{
           style: { color: "#fff" },
         }}
-        sx={{ input: { color: "orange" } }}
+        sx={{ input: { color: "black" } }}
       />
     </ThemeProvider>
   );
@@ -116,7 +117,7 @@ export const renderSelect = ({ label, name, color, state, handleOnChange }) => {
       InputLabelProps={{
         style: { color: "#fff" },
       }}
-      sx={{ input: { color: "orange" } }}
+      sx={{ input: { color: "black" } }}
     >
       {genders.map((option) => (
         <MenuItem key={option.value} value={option.value}>
@@ -126,6 +127,21 @@ export const renderSelect = ({ label, name, color, state, handleOnChange }) => {
     </TextField>
   );
 };
+
+export const renderDatePicker = ({ label, name, color, state, handleOnChange }) => {
+  const { data, errors } = state;
+  return (
+    <DateTimePicker
+      id="standard-date-picker"
+      onChange={handleOnChange}
+      variant="outlined"
+      sx={{ input: { color: "black" } }}
+    >
+    </DateTimePicker>
+  );
+};
+
+
 export const renderSelectType = ({
   label,
   name,

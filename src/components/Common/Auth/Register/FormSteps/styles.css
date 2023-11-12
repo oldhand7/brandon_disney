@@ -4,7 +4,7 @@
 }
 
 .MuiStepLabel-label {
-  color: orange !important;
+  color: black !important;
 }
 
 input:-internal-autofill-selected {
@@ -12,11 +12,11 @@ input:-internal-autofill-selected {
 }
 
 .MuiSelect-select {
-  color: orange !important;
+  color: black !important;
 }
 
 .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
-  background-color: rgba(0, 0, 0, 0.8) !important;
+  background-color: rgba(44, 42, 42, 0.8) !important;
   color: white;
 }
 .MuiMenuItem-root,
@@ -24,9 +24,9 @@ input:-internal-autofill-selected {
 #outlined-multiline-flexible12,
 #outlined-multiline-flexible,
 #outlined-multiline-flexible1 {
-  color: orange !important;
+  color: black !important;
 }
 
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
-  color: orange !important;
+  color: black !important;
 }

@@ -5,10 +5,27 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { toast } from "react-toastify";
 import { registerRoute } from "../../../../utils/APIRoutes";
-import AdditionlInfo from "./FormSteps/AdditionalInformation";
 import PersonalBio from "./FormSteps/PersonalBio";
-import ProfessionalInfo from "./FormSteps/ProfessionalInformation";
 import { Styles } from "./styles";
+import { Typography } from "@material-ui/core";
+
+import { Button, createMuiTheme, MenuItem, ThemeProvider } from "@mui/material";
+import TextField from "@mui/material/TextField";
+
+const genders = [
+  {
+    value: "Male",
+    label: "Male",
+  },
+  {
+    value: "Female",
+    label: "Female",
+  },
+  {
+    value: "Others",
+    label: "Others",
+  },
+];
 
 class RegistrationForm extends Component {
   toastOptions = {
@@ -48,36 +65,6 @@ class RegistrationForm extends Component {
     return true;
   };
 
-  handleCompanyValidation = () => {
-    const { gender, type, cabout, cdesc, cname, country, csector, region } =
-      this.state.data;
-    if (csector === "") {
-      toast.error("Please specify your sector", this.toastOptions);
-      return false;
-    } else if (gender === "") {
-      toast.error("Please specify your sector", this.toastOptions);
-      return false;
-    } else if (type === "") {
-      toast.error("Please specify your user type", this.toastOptions);
-      return false;
-    } else if (cabout === "") {
-      toast.error("Please tell us about your company", this.toastOptions);
-      return false;
-    } else if (cdesc === "") {
-      toast.error("Please describe your company", this.toastOptions);
-      return false;
-    } else if (cname === "") {
-      toast.error("Please enter your company's name", this.toastOptions);
-      return false;
-    } else if (country === "") {
-      toast.error("Please select your company", this.toastOptions);
-      return false;
-    } else if (region === "") {
-      toast.error("Please select your region", this.toastOptions);
-      return false;
-    }
-    return true;
-  };
   extractSkills = () => {
     const { data } = this.state;
     data.skillSet.forEach(function (value) {
@@ -213,7 +200,7 @@ class RegistrationForm extends Component {
       type: "",
       username: "",
       password: "",
-
+      birthday: "2023-5-6",
       cname: "",
       country: "",
       region: "",
@@ -257,212 +244,117 @@ class RegistrationForm extends Component {
             target.name
           ] = `Length of ${target.name} must be greater than 3`)
         : (errors[target.name] = "");
+      console.log(target.name, target.value);
       data[target.name] = target.value;
       this.setState({ data, errors });
     };
 
-    const handleOnSkillChange = (e, index) => {
-      const { data, errors } = this.state;
-      e.target.value.length <= 2
-        ? (errors[
-            e.target.name
-          ] = `Length of ${e.target.name} must be greater than 3`)
-        : (errors[e.target.name] = "");
-      data.skillSet[index].skill = e.target.value;
-      this.setState({ data, errors });
-    };
-
-    const handleOnWorkChange = (e, property, index) => {
-      const { data, errors } = this.state;
-      e.target.value.length <= 0
-        ? (errors[e.target.name] = ` ${e.target.name} must not be null`)
-        : (errors[e.target.name] = "");
-      data.workSet[index][property] = e.target.value;
-      this.setState({ data, errors });
-    };
-    const handleOnEduChange = (e, property, index) => {
-      const { data, errors } = this.state;
-      e.target.value.length <= 0
-        ? (errors[e.target.name] = ` ${e.target.name} must not be null`)
-        : (errors[e.target.name] = "");
-      data.educationSet[index][property] = e.target.value;
-      this.setState({ data });
-    };
-
-    const handleAddSkill = () => {
-      const { data, errors } = this.state;
-      data.skillSet = [...data.skillSet, { skill: "" }];
-      this.setState({ data, errors });
-    };
-    const handleAddEdu = () => {
-      const { data, errors } = this.state;
-      data.educationSet = [
-        ...data.educationSet,
-        { etitle: "", ecollege: "", estart: "", eend: "" },
-      ];
-      this.setState({ data, errors });
-    };
-    const handleAddWork = () => {
-      const { data, errors } = this.state;
-      data.workSet = [
-        ...data.workSet,
-        {
-          wtitle: "",
-          wcompany: "",
-          wlocation: "",
-          wtype: "",
-          wstart: "",
-          wend: "",
-        },
-      ];
-      this.setState({ data, errors });
-    };
-
-    const handleRemoveWork = (index) => {
-      const { data, errors } = this.state;
-      const values = [...data.workSet];
-      values.splice(index, 1);
-      data.workSet = values;
-      this.setState({ data, errors });
-    };
-    const handleRemoveEdu = (index) => {
-      const { data, errors } = this.state;
-      const values = [...data.educationSet];
-      values.splice(index, 1);
-      data.educationSet = values;
-      this.setState({ data, errors });
-    };
-    const handleRemoveSkill = (index) => {
-      const { data, errors } = this.state;
-      const values = [...data.skillSet];
-      values.splice(index, 1);
-      data.skillSet = values;
-      this.setState({ data, errors });
-    };
-
-    const handleNext = () => {
-      
-      let { currentStep } = this.state;
-      // currentStep = currentStep + 1;
-      // this.setState({ currentStep });
-    };
-    const handleDateEdu = (date, index, type) => {
-      const { data, errors } = this.state;
-      data.educationSet[index][type] = date;
-      this.setState({ data, errors });
-    };
-    const handleDateWork = (date, index, type) => {
-      const { data, errors } = this.state;
-      data.workSet[index][type] = date;
-      this.setState({ data, errors });
-    };
-    const handlePrev = () => {
-      let { currentStep } = this.state;
-      currentStep = currentStep - 1;
-      this.setState({ currentStep });
-    };
-    const selectCountry = (val) => {
-      this.state.data.country = val;
-      this.setState({ country: val });
-    };
-
-    const selectRegion = (val) => {
-      this.state.data.region = val;
-      this.setState({ region: val });
-    };
-    const steps = [
-      { label: "Personal Bio" },
-      { label: "Additional Information" },
-      { label: "Professional Information" },
-    ];
+    const handleNext = () => {};
 
     const getStepsItems = (steps) => {
-      switch (steps) {
-        case 0:
-          return (
-            <PersonalBio
-              state={this.state}
-              handleOnChange={handleOnChange}
-              handleNext={handleNext}
-            />
-          );
-        case 1:
-          return (
-            <AdditionlInfo
-              state={this.state}
-              handleOnChange={handleOnChange}
-              handleNext={handleNext}
-              handlePrev={handlePrev}
-              selectCountry={selectCountry}
-              selectRegion={selectRegion}
-              handleOnSkillChange={handleOnSkillChange}
-              handleAddSkill={handleAddSkill}
-              handleRemoveSkill={handleRemoveSkill}
-            />
-          );
-        case 2:
-          return (
-            <ProfessionalInfo
-              state={this.state}
-              handleOnChange={handleOnChange}
-              handleFinish={handleNext}
-              handlePrev={handlePrev}
-              handleDateEdu={handleDateEdu}
-              handleAddEdu={handleAddEdu}
-              handleRemoveEdu={handleRemoveEdu}
-              handleOnWorkChange={handleOnWorkChange}
-              handleDateWork={handleDateWork}
-              handleRemoveWork={handleRemoveWork}
-              handleOnEduChange={handleOnEduChange}
-              handleAddWork={handleAddWork}
-            />
-          );
-        default:
-          return (
-            <PersonalBio
-              state={this.state}
-              handleOnChange={handleOnChange}
-              handleNext={handleNext}
-            />
-          );
-      }
+      return (
+        <div style={{ padding: "20px" }}>
+          <h2 style={{ textAlign: "center" }}>
+            Please Fill The Personal Details
+          </h2>
+          <TextField
+            label="FirstName"
+            // color={color ? color : "primary"}
+            variant="outlined"
+            fullWidth={true}
+            size="small"
+            name="firstName"
+            style={{ marginTop: "20px" }}
+            value={this.state.data.firstName}
+            error={false}
+            helperText={this.state.errors.name}
+            onChange={handleOnChange}
+            required
+          />
+          <TextField
+            label="LastName"
+            name="lastName"
+            // color={color ? color : "primary"}
+            variant="outlined"
+            fullWidth={true}
+            style={{ marginTop: "20px" }}
+            size="small"
+            value={this.state.data.lastName}
+            error={false}
+            helperText={this.state.errors.name}
+            onChange={handleOnChange}
+            required
+          />
+          <TextField
+            id="standard-select-gender"
+            select
+            name="gender"
+            label={"Gender"}
+            value={this.state.data.gender}
+            onChange={handleOnChange}
+            variant="outlined"
+            // color={color ? color : "primary"}
+            style={{ width: "100%", marginTop: "20px" }}
+            size="small"
+            InputLabelProps={{
+              style: { color: "#fff" },
+            }}
+            sx={{ input: { color: "black" } }}
+          >
+            {genders.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+          <TextField
+            label="PhoneNumber"
+            name="phone"
+            // color={color ? color : "primary"}
+            variant="outlined"
+            fullWidth={true}
+            size="small"
+            value={this.state.data.phone}
+            style={{ marginTop: "20px" }}
+            error={false}
+            helperText={this.state.errors.name}
+            onChange={handleOnChange}
+            required
+          />
+          <TextField
+            label="Email"
+            // color={color ? color : "primary"}
+            variant="outlined"
+            fullWidth={true}
+            size="small"
+            value={this.state.data.email}
+            error={false}
+            style={{ marginTop: "20px" }}
+            helperText={this.state.errors.name}
+            onChange={handleOnChange}
+            required
+          />
+          <div style={{ display: "flex" }}>
+            <Button
+              primary
+              size="large"
+              style={{ marginLeft: "auto", marginTop: "40px" }}
+            >
+              {"Apply"}
+            </Button>
+          </div>
+        </div>
+        // <PersonalBio
+        //   state={this.state}
+        //   handleOnChange={handleOnChange}
+        //   handleNext={handleNext}
+        // />
+      );
     };
     return (
       <div>
-        <Grid
-          container
-          className={classes.formContainer}
-          // style={{
-          //   background: `url(${background})`,
-          // }}
-        >
+        <Grid container className={classes.formContainer}>
           <Grid item xs={12} sm={7}>
-            {/* <Paper className={classes.transparent}>
-              <Box
-                p={2}
-                mb={2}
-                component={Paper}
-                style={{ background: "transparent" }}
-                // className={classes.transparent}
-              >
-                <Box mb={1}>
-                  {renderText({
-                    label: "JoinDisney+ Registration Form",
-                    variant: "h5",
-                  })}
-                </Box>
-                <Stepper activeStep={this.state.currentStep} alternativeLabel>
-                  {steps.map((item, i) => (
-                    <Step key={i}>
-                      <StepLabel style={{ color: "orange !important" }}>
-                        {item.label}
-                      </StepLabel>
-                    </Step>
-                  ))}
-                </Stepper>
-              </Box>
-            </Paper> */}
-
             <Box mb={16} component={Paper} className={classes.transparent}>
               <form
                 className={classes.form}

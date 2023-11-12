@@ -14,6 +14,8 @@ import {
   TopLine,
 } from "./InfoElements";
 import { Button } from "../../ButtonElement";
+import ScrollAnimation from "react-animate-on-scroll";
+import { FaBookOpen } from "react-icons/fa";
 
 const InfoSection = ({
   lightBg,
@@ -35,13 +37,28 @@ const InfoSection = ({
     <>
       <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
-          <div imgStart={imgStart} style={{ marginTop: "50px" }}>
-            <Column1>
-              <TextWrapper>
-                <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <Subtitle darkText={darkText}>{description}</Subtitle>
-                {/* <BtnWrap>
+          <div
+            imgStart={imgStart}
+            style={{ marginTop: "50px", display: "flex" }}
+          >
+            <ScrollAnimation animateIn="fadeInLeft" delay={0.2 * 1000}>
+              <Column2>
+                <ImgWrap>
+                  <Img src={img} alt={alt} />
+                </ImgWrap>
+              </Column2>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="fadeInRight" delay={0.2 * 1000}>
+              <Column1>
+                <TextWrapper>
+                  {/* <TopLine>{topLine}</TopLine> */}
+
+                  <Heading lightText={lightText}>
+                    <FaBookOpen style={{ marginRight: "10px" }}></FaBookOpen>
+                    {headline}
+                  </Heading>
+                  <Subtitle darkText={darkText}>{description}</Subtitle>
+                  {/* <BtnWrap>
                   <Button
                     to="/auth/register"
                     primary={primary ? 1 : 0}
@@ -51,11 +68,9 @@ const InfoSection = ({
                     {button_label}
                   </Button>
                 </BtnWrap> */}
-              </TextWrapper>
-            </Column1>
-            <Column2>
-              <ImgWrap>{/* <Img src={img} alt={alt} /> */}</ImgWrap>
-            </Column2>
+                </TextWrapper>
+              </Column1>
+            </ScrollAnimation>
           </div>
         </InfoWrapper>
       </InfoContainer>
