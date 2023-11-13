@@ -62,7 +62,11 @@ const InfoSection = ({
                     <FaBookOpen style={{ marginRight: "10px" }}></FaBookOpen>
                     {headline}
                   </Heading>
-                  <Subtitle darkText={darkText} className="txt-white">
+                  <Subtitle
+                    darkText={darkText}
+                    className="txt-white"
+                    style={{ textAlign: "left" }}
+                  >
                     {description}
                   </Subtitle>
                   {/* <BtnWrap>
