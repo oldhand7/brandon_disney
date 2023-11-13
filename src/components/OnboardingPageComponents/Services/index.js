@@ -40,7 +40,10 @@ const Services = () => {
             </ServicesP>
             <div style={{ display: "flex" }}>
               <Button primary size="large" style={{ marginLeft: "auto" }}>
-                <a href="/editor" style={{ textDecoration: "none" }}>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeqXytvS_kzCA3ge8hocuKsk3IWH2Dw6r94eDGatRHVjxLohA/viewform?usp=sharing "
+                  style={{ textDecoration: "none" }}
+                >
                   {"Apply"}
                 </a>
               </Button>
@@ -59,7 +62,10 @@ const Services = () => {
           </ServicesP>
           <div style={{ display: "flex" }}>
             <Button primary size="large" style={{ marginLeft: "auto" }}>
-              <a href="/thumb" style={{ textDecoration: "none" }}>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScbetwtvR2kagLupjxjhCCxT2lBSCCxNdsmxPYLkz25apr2Qg/viewform?usp=sharing"
+                style={{ textDecoration: "none" }}
+              >
                 {"Apply"}
               </a>
             </Button>
@@ -78,7 +84,10 @@ const Services = () => {
             </ServicesP>
             <div style={{ display: "flex" }}>
               <Button primary size="large" style={{ marginLeft: "auto" }}>
-                <a href="/animator" style={{ textDecoration: "none" }}>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfmSRcLIB_s6UvKQnERfnDNx5ztjCFalwV0xvph1Gozv0jYbQ/viewform?usp=sharing "
+                  style={{ textDecoration: "none" }}
+                >
                   {"Apply"}
                 </a>
               </Button>

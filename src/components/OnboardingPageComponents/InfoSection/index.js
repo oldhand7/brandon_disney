@@ -47,12 +47,10 @@ const InfoSection = ({
               style={{ display: "flex", alignItems: "center" }}
             >
               <Column2>
-                <ImgWrap>
-                  <img src="/images/about.png" style={{ width: "100%" }}>
-                    {" "}
-                  </img>
-                  {/* <Img src={img} alt={alt} /> */}
-                </ImgWrap>
+                {/* <ImgWrap> */}
+                <img src="/images/about.png" width="100%" />{" "}
+                {/* <Img src={img} alt={alt} /> */}
+                {/* </ImgWrap> */}
               </Column2>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInRight" delay={0.2 * 1000}>
