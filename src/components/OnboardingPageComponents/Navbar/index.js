@@ -38,9 +38,22 @@ const Navbar = ({ toggle, hide, type }) => {
       <IconContext.Provider value={{ color: "#01bf71" }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
-            <NavLogo to="/" onClick={toggleHome}>
+            {/* <NavItem>
+                <NavLinks
+                  to="apply"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  Apply
+                </NavLinks>
+              </NavItem> */}
+            <NavLogo to="apply" smooth onClick={toggleHome}>
               Join VarietySplash
             </NavLogo>
+
             <MobileIcon onClick={toggle}>
               <FaBars />
             </MobileIcon>
