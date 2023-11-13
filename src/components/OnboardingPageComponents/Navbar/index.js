@@ -46,7 +46,7 @@ const Navbar = ({ toggle, hide, type }) => {
                   spy={true}
                   exact="true"
                   offset={-80}
-                >
+                > 
                   Apply
                 </NavLinks>
               </NavItem> */}
