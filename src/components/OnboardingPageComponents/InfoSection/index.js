@@ -48,7 +48,9 @@ const InfoSection = ({
             >
               <Column2>
                 <ImgWrap>
-                  <img src="/images/about.png" style={{ width: "100%" }}></img>
+                  <img src="/images/about.png" style={{ width: "100%" }}>
+                    {" "}
+                  </img>
                   {/* <Img src={img} alt={alt} /> */}
                 </ImgWrap>
               </Column2>
