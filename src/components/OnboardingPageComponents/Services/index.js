@@ -32,11 +32,11 @@ const Services = () => {
             {/* <ServicesIcon src={Icon1} /> */}
             <img src="/images/editor.png" width="60px" />
 
-            <ServicesH2>Media Editor</ServicesH2>
+            <ServicesH2>Sound Designer</ServicesH2>
             <ServicesP>
-              We are looking for a talented video editor to assemble recorded
-              footage into a finished project that matches our company vision
-              and is suitable for publication.
+              We are looking for a creative sound designer to join our animated
+              story YouTube channel team to produce and edit engaging sound
+              effects and music that bring our stories to life.
             </ServicesP>
             <div style={{ display: "flex" }}>
               <Button primary size="large" style={{ marginLeft: "auto" }}>
@@ -51,11 +51,11 @@ const Services = () => {
           {/* <ServicesIcon src={Icon1} /> */}
           <img src="/images/thumb.png" width="60px" />
 
-          <ServicesH2>Thumbnail Designer</ServicesH2>
+          <ServicesH2>Editor</ServicesH2>
           <ServicesP>
-            We are looking for someone to create thumbnails for our videos. You
-            should be able to create thumbnails that are eye catching and can
-            attract viewers to click.
+            We are looking for a talented video editor to review and assemble
+            footage given in our scripts into compelling videos that align with
+            our true crime YouTube channel's style.
           </ServicesP>
           <div style={{ display: "flex" }}>
             <Button primary size="large" style={{ marginLeft: "auto" }}>
@@ -70,11 +70,11 @@ const Services = () => {
             {/* <ServicesIcon src={Icon1} /> */}
             <img src="/images/animator.png" width="60px" />
 
-            <ServicesH2>Animator</ServicesH2>
+            <ServicesH2>Writer</ServicesH2>
             <ServicesP>
-              We are looking for a talented animator to create animated clips
-              for our videos. You should be able to bring sight and sound
-              together in order to tell a cohesive story.
+              We are looking for a talented true crime writer to research and
+              craft compelling narratives around real criminal cases for scripts
+              behind compelling true crime videos on our YouTube channel.
             </ServicesP>
             <div style={{ display: "flex" }}>
               <Button primary size="large" style={{ marginLeft: "auto" }}>

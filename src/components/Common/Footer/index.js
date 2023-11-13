@@ -68,7 +68,7 @@ const Footer = () => {
               Reserved
               <FooterLink to="/about/terms"> | Terms of Service</FooterLink>
             </WebsiteRights>
-            <SocialIcons>
+            {/* <SocialIcons>
               <SocialIconLink
                 href="https://github.com/"
                 target="_blank"
@@ -104,7 +104,7 @@ const Footer = () => {
               >
                 <FaLinkedin />
               </SocialIconLink>
-            </SocialIcons>
+            </SocialIcons> */}
           </SocialMediaWrap>
         </SocialMedia>
       </FooterWrap>
