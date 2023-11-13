@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Video from "../../../videos/Video.mp4";
+import Video from "../../../videos/bg.mp4";
 import { Button } from "../../ButtonElement";
 import {
   ArrowForward,
@@ -22,7 +22,7 @@ const HeroSection = () => {
     <HeroContainer id="home">
       <HeroBg>
         <img src="./back.webp" width="100%" />
-        {/* <VideoBg autoPlay loop muted src={Video} type="video/mp4" /> */}
+        <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
       </HeroBg>
       <HeroContent>
         <HeroH1>Join Us!</HeroH1>
