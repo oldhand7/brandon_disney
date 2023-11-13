@@ -35,7 +35,7 @@ const InfoSection = ({
 }) => {
   return (
     <>
-      <InfoContainer lightBg={lightBg} id={id}>
+      <InfoContainer lightBg={lightBg} id={id} className="bg-black">
         <InfoWrapper>
           <div
             imgStart={imgStart}
@@ -49,15 +49,17 @@ const InfoSection = ({
               </Column2>
             </ScrollAnimation>
             <ScrollAnimation animateIn="fadeInRight" delay={0.2 * 1000}>
-              <Column1>
+              <Column1 children>
                 <TextWrapper>
                   {/* <TopLine>{topLine}</TopLine> */}
 
-                  <Heading lightText={lightText}>
+                  <Heading lightText={lightText} className="txt-white">
                     <FaBookOpen style={{ marginRight: "10px" }}></FaBookOpen>
                     {headline}
                   </Heading>
-                  <Subtitle darkText={darkText}>{description}</Subtitle>
+                  <Subtitle darkText={darkText} className="txt-white">
+                    {description}
+                  </Subtitle>
                   {/* <BtnWrap>
                   <Button
                     to="/auth/register"

@@ -10,7 +10,7 @@ export const homeObjOne = {
   button_label: "Sign Up Now",
   imgStart: false,
   alt: "Home Image",
-  img: require("../../../images/svg-1.svg").default,
+  img: require("../../../images/svg-2.svg").default,
 
   dark: true,
   primary: true,

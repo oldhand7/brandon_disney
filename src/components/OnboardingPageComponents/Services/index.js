@@ -12,112 +12,80 @@ import {
   ServicesP,
   ServicesWrapper,
 } from "./ServiceElements";
+import { Img } from "../InfoSection/InfoElements";
 import { Button } from "@mui/material";
 import ScrollAnimation from "react-animate-on-scroll";
 import { FaTasks } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Services = () => {
   return (
-    <ServicesContainer id="apply">
-      <ServicesH1>
+    <ServicesContainer id="apply" className="bg-black">
+      <ServicesH1 className="txt-white">
         {" "}
-        <FaTasks style={{ marginRight: "20px" }}></FaTasks>Our Jobs
+        <FaTasks style={{ marginRight: "20px" }}></FaTasks>
+        Our Jobs
       </ServicesH1>
       <ServicesWrapper>
         <ScrollAnimation animateIn="fadeInLeft">
-          <ServicesCard>
+          <ServicesCard className="txt-white">
             {/* <ServicesIcon src={Icon1} /> */}
+            <img src="/images/editor.png" width="60px" />
+
             <ServicesH2>Media Editor</ServicesH2>
             <ServicesP>
-              Leverage social media platforms to promote your cartoons. Share
-              teaser clips, behind-the-scenes content, and engage with your
-              audience through comments and messages.
+              We are looking for a talented video editor to assemble recorded
+              footage into a finished project that matches our company vision
+              and is suitable for publication.
             </ServicesP>
             <div style={{ display: "flex" }}>
               <Button primary size="large" style={{ marginLeft: "auto" }}>
-                {"Apply"}
+                <a href="/editor" style={{ textDecoration: "none" }}>
+                  {"Apply"}
+                </a>
               </Button>
             </div>
           </ServicesCard>
         </ScrollAnimation>
-        <ServicesCard>
+        <ServicesCard className="txt-white">
           {/* <ServicesIcon src={Icon1} /> */}
-          <ServicesH2>Media Editor</ServicesH2>
+          <img src="/images/thumb.png" width="60px" />
+
+          <ServicesH2>Thumbnail Designer</ServicesH2>
           <ServicesP>
-            Leverage social media platforms to promote your cartoons. Share
-            teaser clips, behind-the-scenes content, and engage with your
-            audience through comments and messages.
+            We are looking for someone to create thumbnails for our videos. You
+            should be able to create thumbnails that are eye catching and can
+            attract viewers to click.
           </ServicesP>
           <div style={{ display: "flex" }}>
             <Button primary size="large" style={{ marginLeft: "auto" }}>
-              {"Apply"}
+              <a href="/thumb" style={{ textDecoration: "none" }}>
+                {"Apply"}
+              </a>
             </Button>
           </div>
         </ServicesCard>
         <ScrollAnimation animateIn="fadeInRight">
-          <ServicesCard>
+          <ServicesCard className="txt-white">
             {/* <ServicesIcon src={Icon1} /> */}
-            <ServicesH2>Media Editor</ServicesH2>
+            <img src="/images/animator.png" width="60px" />
+
+            <ServicesH2>Animator</ServicesH2>
             <ServicesP>
-              Leverage social media platforms to promote your cartoons. Share
-              teaser clips, behind-the-scenes content, and engage with your
-              audience through comments and messages.
+              We are looking for a talented animator to create animated clips
+              for our videos. You should be able to bring sight and sound
+              together in order to tell a cohesive story.
             </ServicesP>
             <div style={{ display: "flex" }}>
               <Button primary size="large" style={{ marginLeft: "auto" }}>
-                {"Apply"}
+                <a href="/animator" style={{ textDecoration: "none" }}>
+                  {"Apply"}
+                </a>
               </Button>
             </div>
           </ServicesCard>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInLeft">
-          <ServicesCard>
-            {/* <ServicesIcon src={Icon1} /> */}
-            <ServicesH2>Media Editor</ServicesH2>
-            <ServicesP>
-              Leverage social media platforms to promote your cartoons. Share
-              teaser clips, behind-the-scenes content, and engage with your
-              audience through comments and messages.
-            </ServicesP>
-            <div style={{ display: "flex" }}>
-              <Button primary size="large" style={{ marginLeft: "auto" }}>
-                {"Apply"}
-              </Button>
-            </div>
-          </ServicesCard>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp">
-          <ServicesCard>
-            {/* <ServicesIcon src={Icon1} /> */}
-            <ServicesH2>Media Editor</ServicesH2>
-            <ServicesP>
-              Leverage social media platforms to promote your cartoons. Share
-              teaser clips, behind-the-scenes content, and engage with your
-              audience through comments and messages.
-            </ServicesP>
-            <div style={{ display: "flex" }}>
-              <Button primary size="large" style={{ marginLeft: "auto" }}>
-                {"Apply"}
-              </Button>
-            </div>
-          </ServicesCard>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInRight">
-          <ServicesCard>
-            {/* <ServicesIcon src={Icon1} /> */}
-            <ServicesH2>Media Editor</ServicesH2>
-            <ServicesP>
-              Leverage social media platforms to promote your cartoons. Share
-              teaser clips, behind-the-scenes content, and engage with your
-              audience through comments and messages.
-            </ServicesP>
-            <div style={{ display: "flex" }}>
-              <Button primary size="large" style={{ marginLeft: "auto" }}>
-                {"Apply"}
-              </Button>
-            </div>
-          </ServicesCard>
-        </ScrollAnimation>
+
         {/* <ServicesCard>
           <ServicesIcon src={Icon2} />
           <ServicesH2>Real Time Communication</ServicesH2>
