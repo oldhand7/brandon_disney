@@ -36,7 +36,7 @@ const AuthNavbar = ({ toggle }) => {
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <NavLogo to="/" onClick={toggleHome}>
-              JoinDisney+
+              Join VarietySplash
             </NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />

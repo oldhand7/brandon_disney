@@ -61,7 +61,7 @@ const Footer = () => {
         <SocialMedia>
           <SocialMediaWrap>
             <SocialLogo to="/" onClick={toggleHome}>
-              JoinDisney+
+              Join VarietySplash
             </SocialLogo>
             <WebsiteRights>
               Curtis Wilmoth &copy; {new Date().getFullYear()} All Rights

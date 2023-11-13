@@ -1,6 +1,6 @@
-# JoinDisney+
+# Join VarietySplash
 
-JoinDisney+ is a complete job requirtment and hiring solution. This application offers solutions best focused in simpliflying hiring process. The features of this site are:
+Join VarietySplash is a complete job requirtment and hiring solution. This application offers solutions best focused in simpliflying hiring process. The features of this site are:
 
 ⚪ Allows recruiters to post for job vaccancies
 
@@ -51,13 +51,13 @@ JoinDisney+ is a complete job requirtment and hiring solution. This application 
 Clone the project
 
 ```bash
-  git clone https://github.com/Chirag123-bit/JoinDisney+-Frontend.git
+  git clone https://github.com/Chirag123-bit/Join VarietySplash-Frontend.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd JoinDisney+-Frontend
+  cd Join VarietySplash-Frontend
 ```
 
 Install dependencies

@@ -57,7 +57,7 @@ const Home = () => {
           <h2 style={{ marginTop: "30px" }}>3. Governing Law</h2>
           <p>
             These terms and conditions are governed by and construed in
-            accordance with the laws of JoinDisney+.
+            accordance with the laws of Join VarietySplash.
           </p>
         </section>
       </div>
