@@ -20,20 +20,10 @@ const Sidebar = ({ isOpen, toggle }) => {
         <SidebarMenu>
           <SidebarLink to="about">About</SidebarLink>
         </SidebarMenu>
+
         <SidebarMenu>
-          <SidebarLink to="discover">Discover</SidebarLink>
+          <SidebarLink to="apply">Apply</SidebarLink>
         </SidebarMenu>
-        <SidebarMenu>
-          <SidebarLink to="services">Services</SidebarLink>
-        </SidebarMenu>
-        <SidebarMenu>
-          <SidebarLink to="signup">Sign Up</SidebarLink>
-        </SidebarMenu>
-        <SideBtnWrap>
-          <SideBtnWrap>
-            <SidebarRoute to="/signin">Sign In</SidebarRoute>
-          </SideBtnWrap>
-        </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
   );

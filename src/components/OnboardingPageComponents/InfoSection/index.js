@@ -38,22 +38,29 @@ const InfoSection = ({
       <InfoContainer lightBg={lightBg} id={id} className="bg-black">
         <InfoWrapper>
           <div
+            className="row"
             imgStart={imgStart}
             style={{ marginTop: "50px", display: "flex" }}
           >
             <ScrollAnimation
               animateIn="fadeInLeft"
+              className="col-md-5"
               delay={0.2 * 1000}
               style={{ display: "flex", alignItems: "center" }}
             >
-              <Column2 style={{ width: "500px" }}>
+              <Column2>
                 {/* <ImgWrap> */}
                 <img src="/images/youtube.png" width="100%" />{" "}
                 {/* <Img src={img} alt={alt} /> */}
                 {/* </ImgWrap> */}
               </Column2>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="fadeInRight" delay={0.2 * 1000}>
+
+            <ScrollAnimation
+              className="col-md-7"
+              animateIn="fadeInRight"
+              delay={0.2 * 1000}
+            >
               <Column1 children>
                 <TextWrapper>
                   {/* <TopLine>{topLine}</TopLine> */}

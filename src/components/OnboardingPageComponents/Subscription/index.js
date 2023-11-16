@@ -27,13 +27,16 @@ const Subscription = ({ lightBg, id }) => {
         style={{ paddingTop: "30px" }}
       >
         <InfoWrapper>
-          <div style={{ display: "flex", color: "rgb(180, 188, 180)" }}>
-            <div style={{ display: "flex", alignItems: "center" }}>
+          <div style={{ color: "rgb(180, 188, 180)" }} className="row">
+            <div
+              className="col-md-5"
+              style={{ display: "flex", alignItems: "center" }}
+            >
               <div
                 class="area"
                 style={{
-                  width: "500px",
                   display: "flex",
+                  marginLeft: "auto",
                   justifyContent: "center",
                 }}
               >
@@ -96,7 +99,12 @@ const Subscription = ({ lightBg, id }) => {
                 </div>
               </div>
             </div>
-            <ScrollAnimation animateIn="fadeInRight" delay={0.2 * 1000}>
+
+            <ScrollAnimation
+              className="col-md-7"
+              animateIn="fadeInRight"
+              delay={0.2 * 1000}
+            >
               <div
                 class="pinkcol"
                 style={{
