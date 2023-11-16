@@ -1,26 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Column2, ImgWrap, InfoContainer, InfoWrapper } from "./InfoElements";
 import { Button } from "../../ButtonElement";
 import ScrollAnimation from "react-animate-on-scroll";
 import { FaBookOpen } from "react-icons/fa";
 import CountUp from "react-countup";
 
-const Subscription = ({
-  lightBg,
-  id,
-  imgStart,
-  topLine,
-  lightText,
-  darkText,
-  headline,
-  description,
-  button_label,
-  img,
-  alt,
-  primary,
-  dark,
-  dark2,
-}) => {
+const Subscription = ({ lightBg, id }) => {
+  const [countVal, setCountVal] = useState({ sub: 5000001, views: 2000000001 });
+
   return (
     <>
       <InfoContainer
@@ -46,34 +33,47 @@ const Subscription = ({
                   </ScrollAnimation>
                   <ScrollAnimation animateIn="fadeInLeft" delay={0.13 * 1000}>
                     <h3 class="big-number" style={{ color: "#00BCE7" }}>
-                      <CountUp start={0} end={5} duration={4} delay={2} />{" "}
-                      million+
+                      <CountUp
+                        start={0}
+                        enableScrollSpy
+                        end={countVal.sub}
+                        duration={2}
+                        decimals={true}
+                        formattingFn={(val) =>
+                          val > 5000000 ? "5 million+" : val
+                        }
+                      />{" "}
                     </h3>
 
                     <p>SUBSCRIBERS</p>
                   </ScrollAnimation>
 
-                  <ScrollAnimation animateIn="fadeInLeft" delay={0.13 * 1000}>
+                  <ScrollAnimation animateIn="fadeInLeft" delay={0.15 * 1000}>
                     <h3 class="big-number" style={{ color: "#00BCE7" }}>
                       <CountUp
                         start={0}
-                        end={2}
-                        duration={1}
-                        delay={2.2}
+                        end={countVal.views}
+                        duration={4}
+                        decimals={true}
+                        decimalPlaces={true}
+                        enableScrollSpy
+                        formattingFn={(val) =>
+                          val > 2000000000 ? "2 billion+" : val
+                        }
                         separator=","
                       />{" "}
-                      billion+
                     </h3>
                     <p>TOTAL VIEWS</p>
                   </ScrollAnimation>
 
-                  <ScrollAnimation animateIn="fadeInLeft" delay={0.13 * 1000}>
+                  <ScrollAnimation animateIn="fadeInLeft" delay={0.2 * 1000}>
                     <h3 class="big-number" style={{ color: "#00BCE7" }}>
                       <CountUp
-                        start={0}
+                        start={-100}
                         end={13}
+                        enableScrollSpy
                         duration={5}
-                        delay={2}
+                        delay={2.5}
                         separator=","
                       />
                     </h3>
