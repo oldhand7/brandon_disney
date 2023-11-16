@@ -6,7 +6,7 @@ export const homeObjOne = {
   topLine: "About Us",
   headline: "About Us",
   description:
-    "Our extensive network of YouTube channels captivates, educates, and motivates audiences worldwide, harnessing the dynamic force of compelling narratives. Embodying an array of distinct brands,visionary content creators, and cutting-edge technologies, our channels have amassed hundreds of millions of views, marking a digital journey that resonates globally. Whether you're seeking to immerse yourself in the creative realms of content production, fueling the expansive growth and evolution of digital media, contributing to the behind-the-scenes magic of your favorite online shows, or exploring a myriad of possibilities in between, this is your invitation to embark on the next chapter of your professional narrative. Join us in shaping the captivating experiences that our diverse array of YouTube channels deliver, leaving an indelible impact on audiences far and wide.",
+    "We're looking for all-consuming, smart, and creative people to push the boundaries of YouTube. Most importantly, we value people who align with our company values and vision. People with complete respect for others who openly communicate are the reason we have been able to launch so many remarkable ideas. If you think your abilities and passion are a fit for our forward-thinking team, we would love to get in touch with you! ",
   button_label: "Sign Up Now",
   imgStart: false,
   alt: "Home Image",
