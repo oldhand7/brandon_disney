@@ -7,7 +7,17 @@ import CountUp from "react-countup";
 
 const Subscription = ({ lightBg, id }) => {
   const [countVal, setCountVal] = useState({ sub: 5000001, views: 2000000001 });
+  const generateRandomString = (length) => {
+    const characters = "123456789";
+    let result = "";
 
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      result += characters.charAt(randomIndex);
+    }
+
+    return result;
+  };
   return (
     <>
       <InfoContainer
@@ -37,10 +47,10 @@ const Subscription = ({ lightBg, id }) => {
                         start={0}
                         enableScrollSpy
                         end={countVal.sub}
-                        duration={2}
+                        duration={3}
                         decimals={true}
                         formattingFn={(val) =>
-                          val > 5000000 ? "5 million+" : val
+                          val > 5000000 ? "5 million+" : generateRandomString(7)
                         }
                       />{" "}
                     </h3>
@@ -58,7 +68,9 @@ const Subscription = ({ lightBg, id }) => {
                         decimalPlaces={true}
                         enableScrollSpy
                         formattingFn={(val) =>
-                          val > 2000000000 ? "2 billion+" : val
+                          val > 2000000000
+                            ? "2 billion+"
+                            : generateRandomString(10)
                         }
                         separator=","
                       />{" "}
@@ -72,7 +84,10 @@ const Subscription = ({ lightBg, id }) => {
                         start={-100}
                         end={13}
                         enableScrollSpy
-                        duration={5}
+                        duration={2}
+                        formattingFn={(val) =>
+                          val > 2000000000 ? 13 : generateRandomString(2)
+                        }
                         delay={2.5}
                         separator=","
                       />
