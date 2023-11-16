@@ -88,7 +88,6 @@ const Subscription = ({ lightBg, id }) => {
                         formattingFn={(val) =>
                           val > 13 ? 13 : generateRandomString(2)
                         }
-                        delay={2.5}
                         separator=","
                       />
                     </h3>
