@@ -6,6 +6,12 @@ import { homeObjOne } from "../components/OnboardingPageComponents/InfoSection/D
 import NavBar from "../components/OnboardingPageComponents/Navbar";
 import Sidebar from "../components/OnboardingPageComponents/Sidebar";
 import Services from "../components/OnboardingPageComponents/Services";
+import {
+  InfoContainer,
+  InfoWrapper,
+} from "../components/OnboardingPageComponents/InfoSection/InfoElements";
+import Subscription from "../components/OnboardingPageComponents/Subscription";
+
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -32,7 +38,7 @@ const Home = () => {
       <HeroSection />
 
       <InfoSection {...homeObjOne} />
-
+      <Subscription />
       <Services></Services>
       {/* <SimpleRegistrationForm /> */}
       <Footer />

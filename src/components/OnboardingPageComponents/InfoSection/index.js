@@ -3,12 +3,12 @@ import {
   Column2,
   ImgWrap,
   InfoContainer,
+  InfoWrapper,
   BtnWrap,
   Column1,
   Heading,
   Img,
   InfoRow,
-  InfoWrapper,
   Subtitle,
   TextWrapper,
   TopLine,
@@ -46,7 +46,7 @@ const InfoSection = ({
               delay={0.2 * 1000}
               style={{ display: "flex", alignItems: "center" }}
             >
-              <Column2>
+              <Column2 style={{ width: "500px" }}>
                 {/* <ImgWrap> */}
                 <img src="/images/youtube.png" width="100%" />{" "}
                 {/* <Img src={img} alt={alt} /> */}
