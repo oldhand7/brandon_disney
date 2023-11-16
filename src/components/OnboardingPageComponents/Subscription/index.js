@@ -86,7 +86,7 @@ const Subscription = ({ lightBg, id }) => {
                         enableScrollSpy
                         duration={2}
                         formattingFn={(val) =>
-                          val > 2000000000 ? 13 : generateRandomString(2)
+                          val > 13 ? 13 : generateRandomString(2)
                         }
                         delay={2.5}
                         separator=","
