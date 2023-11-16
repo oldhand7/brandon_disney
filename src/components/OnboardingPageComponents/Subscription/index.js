@@ -82,7 +82,7 @@ const Subscription = ({ lightBg, id }) => {
                     <h3 class="big-number" style={{ color: "#00BCE7" }}>
                       <CountUp
                         start={-100}
-                        end={13}
+                        end={14}
                         enableScrollSpy
                         duration={2}
                         formattingFn={(val) =>
