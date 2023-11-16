@@ -30,13 +30,17 @@ const Subscription = ({ lightBg, id }) => {
           <div style={{ color: "rgb(180, 188, 180)" }} className="row">
             <div
               className="col-md-5"
-              style={{ display: "flex", alignItems: "center" }}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
             >
               <div
                 class="area"
                 style={{
                   display: "flex",
-                  marginLeft: "auto",
+                  // marginLeft: "auto",
                   justifyContent: "center",
                 }}
               >
@@ -118,17 +122,17 @@ const Subscription = ({ lightBg, id }) => {
                 </h2>
                 <ScrollAnimation animateIn="fadeInRight" delay={0.15 * 1000}>
                   <p style={{ color: "rgb(180, 188, 180)" }}>
-                    We are the largest YouTube brand in the world, renowned for
-                    our seemingly impossible creative ingenuities. At MrBeast,
-                    we attribute much of our success to putting our four
-                    foundational pillars of viral content above everything else:
-                    IRL Comedy, Spectacles, General Good, and Philanthropy. Our
-                    YouTube presence boasts 6 channels, 146 million subscribers,
-                    20 billion video views, and a 501c3 accredited charity.
+                    Our network of YouTube channels captivates and motivates
+                    audiences worldwide. With over 5 million subscribers, 2
+                    billion views, and 13 channels, we've successfully created
+                    binge-worthy content across genres, fueled by our creative
+                    team's passion for producing innovative content. Join us in
+                    delivering captivating experiences that leave an impact on
+                    diverse audiences.
                   </p>
                 </ScrollAnimation>
 
-                <ScrollAnimation animateIn="fadeInRight" delay={0.18 * 1000}>
+                {/* <ScrollAnimation animateIn="fadeInRight" delay={0.18 * 1000}>
                   <p style={{ color: "rgb(180, 188, 180)" }}>
                     It takes a team of the world s best to stay cutting edge in
                     an ephemeral culture. Therefore, we are looking for
@@ -145,7 +149,7 @@ const Subscription = ({ lightBg, id }) => {
                     If you think you have what it takes to be a part of our
                     innovative team, we would love to chat with you!
                   </p>
-                </ScrollAnimation>
+                </ScrollAnimation> */}
               </div>
             </ScrollAnimation>
           </div>
