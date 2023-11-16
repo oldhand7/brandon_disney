@@ -59,17 +59,17 @@ const Subscription = ({
                 <div style={{}}>
                   <h2 class="med-title">By The Numbers</h2>
                   <h3 class="big-number" style={{ color: "#00BCE7" }}>
-                    225 million+
+                    5 million+
                   </h3>
                   <p>SUBSCRIBERS</p>
                   <h3 class="big-number" style={{ color: "#00BCE7" }}>
-                    25 billion+
+                    2 billion+
                   </h3>
                   <p>TOTAL VIEWS</p>
                   <h3 class="big-number" style={{ color: "#00BCE7" }}>
-                    $10 million+
+                    13
                   </h3>
-                  <p>DONATED</p>
+                  <p>CHANNELS</p>
                 </div>
               </div>
             </ScrollAnimation>
