@@ -132,18 +132,19 @@ const Subscription = ({ lightBg, id }) => {
                   </p>
                 </ScrollAnimation>
 
-                {/* <ScrollAnimation animateIn="fadeInRight" delay={0.18 * 1000}>
+                <ScrollAnimation animateIn="fadeInRight" delay={0.18 * 1000}>
                   <p style={{ color: "rgb(180, 188, 180)" }}>
-                    It takes a team of the world s best to stay cutting edge in
-                    an ephemeral culture. Therefore, we are looking for
-                    obsessive people that are smart and well versed in content
-                    creation. These individuals will not only fit in with our
-                    company values, but they will also be curious, ambitious,
-                    fearless, self-starters that push the limits of what was
-                    once thought of as impossible.
+                    We're looking for all-consuming, smart, and creative people
+                    to push the boundaries of YouTube. Most importantly, we
+                    value people who align with our company values and vision.
+                    People with complete respect for others who openly
+                    communicate are the reason we have been able to launch so
+                    many remarkable ideas. If you think your abilities and
+                    passion are a fit for our forward-thinking team, we would
+                    love to get in touch with you! this is the full correct text
                   </p>
                 </ScrollAnimation>
-
+                {/* 
                 <ScrollAnimation animateIn="fadeInRight" delay={0.2 * 1000}>
                   <p style={{ color: "rgb(180, 188, 180)" }}>
                     If you think you have what it takes to be a part of our
