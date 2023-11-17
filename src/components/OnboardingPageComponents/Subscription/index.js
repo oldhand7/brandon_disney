@@ -25,7 +25,7 @@ const Subscription = ({ lightBg, id }) => {
         lightBg={lightBg}
         id={id}
         className="bg-black"
-        style={{ paddingTop: "30px" }}
+        style={{ paddingTop: "10px" }}
       >
         <InfoWrapper>
           <div style={{ color: "rgb(180, 188, 180)" }} className="row">
