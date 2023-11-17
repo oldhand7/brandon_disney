@@ -4,6 +4,7 @@ import { Button } from "../../ButtonElement";
 import ScrollAnimation from "react-animate-on-scroll";
 import { FaBookOpen } from "react-icons/fa";
 import CountUp from "react-countup";
+import { FaUserFriends } from "react-icons/fa";
 
 const Subscription = ({ lightBg, id }) => {
   const [countVal, setCountVal] = useState({ sub: 5000001, views: 2000000001 });
@@ -117,9 +118,15 @@ const Subscription = ({ lightBg, id }) => {
                   color: "rgb(180, 188, 180)",
                 }}
               >
-                <h2 class="med-title" style={{ color: "rgb(180, 188, 180)" }}>
-                  Who We Are
-                </h2>
+                <div style={{ display: "flex" }}>
+                  <FaUserFriends
+                    style={{ marginRight: "10px", fontSize: "2rem" }}
+                  />
+                  <h2 class="med-title" style={{ color: "rgb(180, 188, 180)" }}>
+                    Who We Are
+                  </h2>
+                </div>
+
                 <ScrollAnimation animateIn="fadeInRight" delay={0.15 * 1000}>
                   <p style={{ color: "rgb(180, 188, 180)" }}>
                     Our network of YouTube channels captivates and motivates
