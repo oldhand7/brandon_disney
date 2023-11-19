@@ -58,7 +58,7 @@ const Subscription = ({ lightBg, id }) => {
                         duration={3}
                         decimals={true}
                         formattingFn={(val) =>
-                          val > 5000000 ? "5 million+" : generateRandomString(7)
+                          val > 5000000 ? "5 million+" : val
                         }
                       />{" "}
                     </h3>
@@ -76,9 +76,7 @@ const Subscription = ({ lightBg, id }) => {
                         decimalPlaces={true}
                         enableScrollSpy
                         formattingFn={(val) =>
-                          val > 2000000000
-                            ? "2 billion+"
-                            : generateRandomString(10)
+                          val > 2000000000 ? "2 billion+" : val
                         }
                         separator=","
                       />{" "}
@@ -93,9 +91,7 @@ const Subscription = ({ lightBg, id }) => {
                         end={14}
                         enableScrollSpy
                         duration={2}
-                        formattingFn={(val) =>
-                          val > 13 ? 13 : generateRandomString(2)
-                        }
+                        formattingFn={(val) => (val > 13 ? 13 : val)}
                         separator=","
                       />
                     </h3>
@@ -148,7 +144,7 @@ const Subscription = ({ lightBg, id }) => {
                     communicate are the reason we have been able to launch so
                     many remarkable ideas. If you think your abilities and
                     passion are a fit for our forward-thinking team, we would
-                    love to get in touch with you! this is the full correct text
+                    love to get in touch with you!
                   </p>
                 </ScrollAnimation>
                 {/* 
