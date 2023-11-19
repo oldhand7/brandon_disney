@@ -49,7 +49,7 @@ export const VideoBg = styled.video`
 
 export const HeroContent = styled.div`
   z-index: 3;
-  top: 38vh;
+  top: 18vh;
 
   max-width: 1200px;
   position: absolute;
@@ -77,7 +77,6 @@ export const HeroP = styled.p`
   color: #fff;
   font-size: 24px;
   text-align: center;
-  max-width: 600px;
 
   @media screen and (max-width: 768px) {
     font-size: 24px;

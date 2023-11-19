@@ -36,9 +36,10 @@ const Home = () => {
 
       <NavBar toggle={toggle} hide={hide} type={type} />
       <HeroSection />
-
-      <InfoSection {...homeObjOne} />
-      <Subscription />
+      <div style={{ backgroundImage: "url(about_bg.png)" }}>
+        <InfoSection {...homeObjOne} />
+        <Subscription />
+      </div>
       <Services></Services>
       {/* <SimpleRegistrationForm /> */}
       <Footer />

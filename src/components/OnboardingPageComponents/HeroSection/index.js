@@ -19,14 +19,19 @@ const HeroSection = () => {
   const onHover = () => setHover(!hover);
 
   return (
-    <HeroContainer id="home">
+    <HeroContainer id="home" style={{ height: "100vh" }}>
       <HeroBg>
-        {/* <img src="./back.webp" width="100%" /> */}
-        <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
+        <img src="./back.webp" width="100%" />
+        {/* <VideoBg autoPlay loop muted src={Video} type="video/mp4" /> */}
       </HeroBg>
       <HeroContent>
-        <HeroH1>Join Us!</HeroH1>
-        {/* <HeroP>Apply for a free account and Join us right away!</HeroP> */}
+        <HeroH1>
+          <span style={{ color: "red" }}>Changing media</span>, one project at a
+          time
+        </HeroH1>
+        <HeroP>
+          Our goal at VarietySplash is to distribute media that change viewers
+        </HeroP>
         <HeroBtnWrapper>
           <NavLinks
             to="apply"
@@ -39,35 +44,88 @@ const HeroSection = () => {
             style={{ fontSize: "24px" }}
             offset={-80}
           >
-            {/* <Button
-              onMouseEnter={onHover}
-              onMouseLeave={onHover}
-              primary="true"
-              dark="true"
-            > */}
             Get Started {hover ? <ArrowForward /> : <ArrowRight />}
             {/* </Button> */}
           </NavLinks>
-          {/* <Button
-          
-            to="apply"
-            onMouseEnter={onHover}
-            onMouseLeave={onHover}
-            primary="true"
-            dark="true"
-          >
-            Get Started {hover ? <ArrowForward /> : <ArrowRight />}
-          </Button> */}
-          {/* <Button
-            to="/applicant/home"
-            onMouseEnter={onHover}
-            onMouseLeave={onHover}
-            primary="true"
-            dark="true"
-          >
-            Get Started {hover ? <ArrowForward /> : <ArrowRight />}
-          </Button> */}
         </HeroBtnWrapper>
+        <div style={{ color: "white", fontSize: "32px", marginTop: "15vh" }}>
+          Our Audience
+        </div>
+        <div style={{ display: "flex" }}>
+          <div
+            className="col-md-4"
+            style={{
+              width: "150px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              background: "#d3d3d36b",
+              marginLeft: "30px",
+
+              borderRadius: "8px",
+              padding: "12px 16px",
+            }}
+          >
+            <span
+              style={{
+                fontSize: "32px",
+                alignItems: "center",
+                color: "lightblue",
+              }}
+            >
+              <b>1B</b>
+            </span>
+            <span style={{ color: "white" }}>monthly views</span>
+          </div>
+          <div
+            className="col-md-4"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+              width: "150px",
+              background: "#d3d3d36b",
+              marginLeft: "30px",
+
+              borderRadius: "8px",
+              padding: "12px 16px",
+            }}
+          >
+            <span
+              style={{
+                fontSize: "32px",
+                color: "lightblue",
+              }}
+            >
+              <b>200M</b>
+            </span>
+            <span style={{ color: "white" }}>global reach</span>
+          </div>
+          <div
+            className="col-md-4"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+              width: "150px",
+              background: "#d3d3d36b",
+              marginLeft: "30px",
+
+              borderRadius: "8px",
+              padding: "12px 16px",
+            }}
+          >
+            <span
+              style={{
+                fontSize: "32px",
+                color: "lightblue",
+              }}
+            >
+              <b>35M</b>
+            </span>
+            <span style={{ color: "white" }}>followers</span>
+          </div>
+        </div>
       </HeroContent>
     </HeroContainer>
   );
