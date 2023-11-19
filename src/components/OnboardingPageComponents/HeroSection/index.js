@@ -21,8 +21,8 @@ const HeroSection = () => {
   return (
     <HeroContainer id="home" style={{ height: "100vh" }}>
       <HeroBg>
-        <img src="./back.webp" width="100%" />
-        {/* <VideoBg autoPlay loop muted src={Video} type="video/mp4" /> */}
+        {/* <img src="./back.webp" width="100%" /> */}
+        <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
       </HeroBg>
       <HeroContent>
         <HeroH1>
