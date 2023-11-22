@@ -9,7 +9,7 @@ export const HeroContainer = styled.div`
   padding: 0 0;
   position: relative;
   z-index: 1;
-  height: 900px;
+  height: 1000px;
   :before {
     content: "";
     position: absolute;
@@ -48,7 +48,7 @@ export const VideoBg = styled.video`
 
 export const HeroContent = styled.div`
   z-index: 3;
-  top: 18vh;
+  top: 10vh;
 
   max-width: 1200px;
   position: absolute;
@@ -62,15 +62,15 @@ export const HeroH1 = styled.h1`
   color: #fff;
   font-size: 100px;
   text-align: center;
-  @media screen and (max-width: 992px) {
-    font-size: 60px;
+  @media screen and (max-width: 1024px) {
+    font-size: 50px;
   }
   @media screen and (max-width: 768px) {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 32px;
+    font-size: 24px;
   }
 `;
 
@@ -79,9 +79,11 @@ export const HeroP = styled.p`
   color: #fff;
   font-size: 24px;
   text-align: center;
-
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+  }
   @media screen and (max-width: 768px) {
-    font-size: 24px;
+    font-size: 12px;
   }
 
   @media screen and (max-width: 480px) {
