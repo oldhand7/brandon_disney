@@ -48,7 +48,7 @@ export const VideoBg = styled.video`
 
 export const HeroContent = styled.div`
   z-index: 3;
-  top: 10vh;
+  top: 15vh;
 
   max-width: 1200px;
   position: absolute;
