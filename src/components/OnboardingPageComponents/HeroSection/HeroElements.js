@@ -60,9 +60,9 @@ export const HeroContent = styled.div`
 
 export const HeroH1 = styled.h1`
   color: #fff;
-  font-size: 100px;
+  font-size: 90px;
   text-align: center;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1124px) {
     font-size: 50px;
   }
   @media screen and (max-width: 768px) {
@@ -91,11 +91,62 @@ export const HeroP = styled.p`
   }
 `;
 
+export const HeroHeader = styled.p`
+  margin-top: 24px;
+  color: #fff;
+  font-size: 24px;
+  margin-top: 40px
+  text-align: center;
+  @media screen and (max-width: 1024px) {
+    margin-top: 0;
+    font-size: 16px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 18px;
+  }
+`;
+
+export const HeroSpan = styled.span`
+fontSize: "32px",
+alignItems: "center",
+color: "lightblue",
+  @media screen and (max-width: 1024px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 12px;
+  }
+`;
 export const HeroBtnWrapper = styled.div`
   margin-top: 32px;
   display: flex;
   flex-direction: row;
   align-items: center;
+`;
+
+export const HeaderAud = styled.div`
+color: "white",
+fontSize: "32px",
+marginTop: "1rem",
+textAlign: "center",
+@media screen and (max-width: 1024px) {
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 480px) {
+  font-size: 18px;
+}
 `;
 
 export const ArrowForward = styled(MdArrowForward)`

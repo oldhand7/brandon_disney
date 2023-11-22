@@ -9,7 +9,9 @@ import {
   HeroContainer,
   HeroContent,
   HeroH1,
+  HeroHeader,
   HeroP,
+  HeroSpan,
   VideoBg,
 } from "./HeroElements";
 import { NavLinks } from "../Navbar/NavbarElements";
@@ -55,16 +57,14 @@ const HeroSection = () => {
             {/* </Button> */}
           </NavLinks>
         </HeroBtnWrapper>
-        <div
+        <HeroHeader
           style={{
             color: "white",
-            fontSize: "32px",
-            marginTop: "1rem",
             textAlign: "center",
           }}
         >
           Our Audience
-        </div>
+        </HeroHeader>
         <div style={{ display: "flex" }}>
           <div
             className="col-md-4"
@@ -80,15 +80,9 @@ const HeroSection = () => {
               padding: "12px 16px",
             }}
           >
-            <span
-              style={{
-                fontSize: "32px",
-                alignItems: "center",
-                color: "lightblue",
-              }}
-            >
+            <HeroSpan>
               <b>50M</b>
-            </span>
+            </HeroSpan>
             <span style={{ color: "white" }}>monthly views</span>
           </div>
           <div
@@ -105,14 +99,9 @@ const HeroSection = () => {
               padding: "12px 16px",
             }}
           >
-            <span
-              style={{
-                fontSize: "32px",
-                color: "lightblue",
-              }}
-            >
+            <HeroSpan>
               <b>4M</b>
-            </span>
+            </HeroSpan>
             <span style={{ color: "white" }}>subscribers</span>
           </div>
           <div
@@ -129,14 +118,9 @@ const HeroSection = () => {
               padding: "12px 16px",
             }}
           >
-            <span
-              style={{
-                fontSize: "32px",
-                color: "lightblue",
-              }}
-            >
+            <HeroSpan>
               <b>234</b>
-            </span>
+            </HeroSpan>
             <span style={{ color: "white" }}>Videos</span>
           </div>
         </div>
