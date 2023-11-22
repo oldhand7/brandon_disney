@@ -22,7 +22,14 @@ const HeroSection = () => {
     <HeroContainer id="home" style={{ height: "100vh" }}>
       <HeroBg>
         {/* <img src="./back.webp" width="100%" /> */}
-        <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
+        <VideoBg
+          autoPlay
+          loop
+          muted
+          src={Video}
+          type="video/mp4"
+          height={"100vh"}
+        />
       </HeroBg>
       <HeroContent>
         <HeroH1>
@@ -48,7 +55,14 @@ const HeroSection = () => {
             {/* </Button> */}
           </NavLinks>
         </HeroBtnWrapper>
-        <div style={{ color: "white", fontSize: "32px", marginTop: "15vh" }}>
+        <div
+          style={{
+            color: "white",
+            fontSize: "32px",
+            marginTop: "1rem",
+            textAlign: "center",
+          }}
+        >
           Our Audience
         </div>
         <div style={{ display: "flex" }}>
