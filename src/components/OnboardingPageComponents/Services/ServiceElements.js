@@ -7,7 +7,6 @@ export const ServicesContainer = styled.div`
   justify-content: center;
   padding-bottom: 100px;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
   @media screen and (max-width: 768px) {
     height: 1100px;
   }

@@ -20,7 +20,7 @@ import { NavLink } from "react-router-dom";
 
 const Services = () => {
   return (
-    <ServicesContainer id="apply" className="bg-black">
+    <ServicesContainer id="apply">
       <ServicesH1 className="txt-white">
         {" "}
         <FaTasks style={{ marginRight: "20px" }}></FaTasks>

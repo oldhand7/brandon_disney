@@ -73,7 +73,7 @@ const HeroSection = () => {
                 color: "lightblue",
               }}
             >
-              <b>1B</b>
+              <b>50M</b>
             </span>
             <span style={{ color: "white" }}>monthly views</span>
           </div>
@@ -97,9 +97,9 @@ const HeroSection = () => {
                 color: "lightblue",
               }}
             >
-              <b>200M</b>
+              <b>4M</b>
             </span>
-            <span style={{ color: "white" }}>global reach</span>
+            <span style={{ color: "white" }}>subscribers</span>
           </div>
           <div
             className="col-md-4"
@@ -121,9 +121,9 @@ const HeroSection = () => {
                 color: "lightblue",
               }}
             >
-              <b>35M</b>
+              <b>234</b>
             </span>
-            <span style={{ color: "white" }}>followers</span>
+            <span style={{ color: "white" }}>Videos</span>
           </div>
         </div>
       </HeroContent>

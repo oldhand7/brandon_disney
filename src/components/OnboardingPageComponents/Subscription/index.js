@@ -21,12 +21,7 @@ const Subscription = ({ lightBg, id }) => {
   };
   return (
     <>
-      <InfoContainer
-        lightBg={lightBg}
-        id={id}
-        className="bg-black"
-        style={{ paddingTop: "10px" }}
-      >
+      <InfoContainer lightBg={lightBg} id={id} style={{ paddingTop: "10px" }}>
         <InfoWrapper>
           <div style={{ color: "rgb(180, 188, 180)" }} className="row">
             <div
